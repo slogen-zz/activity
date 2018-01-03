@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
+		<title>保定渠道拉新</title>
+		<link rel="stylesheet" type="text/css" href="resource/css/ChannelsInvitation/base-1.2.css"/>
+		<style>
+			html{
+				height: 100%;
+		        font-size: 32px;
+		        font-family: "simhei","arial,helvetica,sans-serif";
+			}
+			body{
+				background: #f2f4f6;
+				padding: 1.015625rem 0;
+			}
+			.title{
+				font-size: 0.859375rem;
+				color: #666;
+				text-align: center;
+			}
+			.tip{
+				font-size: 0.390625rem;
+				text-align: center;
+				color: #666;
+				padding-top: 0.3125rem;
+			}
+			.logo{
+				text-align: center;
+				padding-top: 0.578125rem;
+			}
+			.logo img{
+				width: 7.578125rem;
+				height: 6.703125rem;
+			}
+			.vip{
+				padding: 0.46875rem 1.171875rem 1.171875rem;
+				font-size: 0.34375rem;
+				color: #333;
+				/*text-align: center;*/
+			}
+			.register{
+				display: block;
+				width: 4.6875rem;
+				height: 0.9375rem;
+				line-height: 0.9375rem;
+				background: #fae300;
+				font-size: 0.46875rem;
+				text-align: center;
+				margin: 0 auto;
+				color: #666;
+				border: 1px solid #787878;
+				border-radius: 0.078125rem;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="title">e城e家上门维修业务</div>
+		<div class="tip">专业团队·正品配件·价格透明·快速响应</div>
+		<div class="logo"><img src="resource/images/ChannelsInvitation/logo.png" alt="" /></div>
+		<p class="vip"><span style="display: block; text-align: left;">注册送惊喜！足不出户在线缴费，预约上门维修，还能享受优质商户让利优惠！坐享全程VIP待遇，尽享优质惬意生活！</span></p>
+		<a href="javascript:;" class="register">活动未开始</a>
+		<script>
+			document.documentElement.style.fontSize = document.documentElement.clientWidth*0.1+'px';
+/**
+ * [判断活动状态，显示相应内容]
+ * dt == nostart    表示未开始
+ * dt == start    表示已开始
+ **/
+			function state(dt){
+				var reg = document.getElementsByClassName('register')[0];
+				if(dt == 'nostart'){
+					reg.innerHTML = "活动未开始";
+				}else if(dt == 'start'){
+					reg.innerHTML = "我要注册";
+				}else{
+					reg.innerHTML = "活动已结束";
+				}
+			}
+			/*
+			 * [更改title]
+			 */
+			function getTitle(title){
+				document.title = title;
+			}
+			getTitle('石家庄');
+		</script>
+	</body>
+</html>
